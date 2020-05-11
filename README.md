@@ -205,18 +205,32 @@ Operations:
 
 ## Recomended settings at .vimrc
 
+Enabling caching, Listing of files will be faster, On MAC/Unix the default location is $HOME/.cache:
+
+```
 let g:vc_browse_cache_all = 1
-    This enables caching, Listing of files will be faster, On MAC/Unix the default location is $HOME/.cache.
-    A new directory vc will be created in the specified directory.
+```
 
-    For windows this option must be specified along with the cache dir
-    let g:vc_cache_dir="C:/Users/user1"
+A new directory vc will be created in the specified directory.
 
+For windows this option must be specified along with the cache dir
+
+```
+let g:vc_cache_dir="C:/Users/user1"
+```
+
+This provide a menu to navigate available branches and tags for VCLog:
+
+
+```
 let g:vc_branch_url = ["svn://127.0.0.1/Path/until/branches/", "svn://127.0.0.1/Path/until/tags/"]
-    This settings when available will provide menu's to navigate available branches and tags for VCLog
+```
 
+This will provide a menu to navigate trunk files for VCLog:
+
+```
 let g:vc_trunk_url = "svn://127.0.0.1/Path/until/trunk";
-    This settings when available will provide menu's to navigate trunk files for VCLog
+```
 
 ## Installation
 
