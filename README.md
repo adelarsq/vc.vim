@@ -4,7 +4,7 @@ VIM (VIM 7 and up) plugin for subversion (svn), GIT, HG and BZR repositories.
 Support for browsing the repository, working copy, bookmarks.
 Autocompletes command options, file(s), dir(s), repo url(s)
 
-<b>NOTE</b>: svnj.vim users, replace all settings from svnj_ to vc_ 
+**NOTE**: svnj.vim users, replace all settings from svnj_ to vc_ 
 
 ![Animation][1]
    
@@ -12,26 +12,26 @@ Autocompletes command options, file(s), dir(s), repo url(s)
 
 ##Supported Operations
 
-* <b>VCAdd[!] [Arguments] </b>
+* **VCAdd[!] [Arguments]**
     Add and Commit File(s)/Directories to repository. VCAdd is supported as a command and also as an
     operation from VCStatus and VCBrowse output. Available options are to add or add and then commit.
 
-    <b>Supported On :</b> SVN, GIT, HG, BZR
+    **For:** SVN, GIT, HG, BZR
 
-* <b>VCCommit[!] [Arguments] </b>
+* **VCCommit[!] [Arguments]**
     Performs commit. A new buffer will be opened to accept comments. The buffer will list
     the files which are candidates for commit. Files/Directories can also be updated in this buffer. 
     A commit can be forced with no comments with a bang. VCCommit is supported as a command and 
     also as an operation from the VCStatus|VCBrowseWorkingCopy|VCBrowseBuffer output window. 
 
-    <b>Supported On :</b> SVN, GIT, HG, BZR
+    **For:** SVN, GIT, HG, BZR
 
-* <b>VCBlame [Arguments] </b>
+* **VCBlame [Arguments]**
     Vertically splits the blame info for the file in bufffer. Scrollbinds to the file.
     
-    <b>Supported On :</b> SVN, GIT, HG, BZR
+    **For:** SVN, GIT, HG, BZR
 
-* <b>VCStatus [Arguments]</b>
+* **VCStatus [Arguments]**
     Get the output of status command. With the listed files in the split buffer which states the filename
     and status, the following are few of the operations supported
 
@@ -41,9 +41,9 @@ Autocompletes command options, file(s), dir(s), repo url(s)
       - Add selected/marked files 
       - Bookmark
       
-    <b>Supported On :</b> SVN, GIT, HG, BZR
+    **For:** SVN, GIT, HG, BZR
 
-* <b>VCLog [Arguments]</b>
+* **VCLog [Arguments]**
     Lists the log for the current file in buffer.  The output displays the revision, author, comments 
     and the revision when the branch was created. With the revisions listed, diff the required 
     revisions with the file in buffer. Also provides mechanism to diff the file across branches/trunk. 
@@ -55,65 +55,69 @@ Autocompletes command options, file(s), dir(s), repo url(s)
     - Open marked revisons or revison under cursor as new file - newbuffer or vspilt
     - View Info and Log of revision
     
-    <b>Supported On :</b> SVN, GIT, HG, BZR
+    **For:** SVN, GIT, HG, BZR
 
-* <b>VCDiff [Arguments]</b>
+* **VCDiff [Arguments]**
     Immediate diff the file in buffer with the previous/specified revision. If there are more than one file in 
     buffer Ctrl-n/Ctrl-p will close the current diff and move to the next/prev file in buffer. 
     Ctrl-Up and Ctrl-Dowm will move across revisions for the same file
 
-    <b>Supported On :</b> SVN, GIT, HG, BZR
+    **For:** SVN, GIT, HG, BZR
 
-* <b>VCInfo [Arguments]</b>
+* **VCInfo [Arguments]**
     Will display repository info.
-    <b>Supported On :</b> SVN, GIT, HG, BZR
+    **For:** SVN, GIT, HG, BZR
 
-* <b>VCCopy[!] [Arguments]</b>
+* **VCCopy[!] [Arguments]**
     Copy files (repo or local)
 
-    <b>Supported On :</b> SVN, HG
+    **For:** SVN, HG
 
-* <b>VCMove [Arguments]</b>
+* **VCMove [Arguments]**
      Move files. The buffer will be auto reloaded
 
-     <b>Supported On :</b> SVN, GIT, HG
+     **For:** SVN, GIT, HG
 
-* <b>VCRevert[!]</b>
+* **VCRevert[!]**
      Revert to the latest revision, operates on the file in buffer. ! causes the buffer to auto reload
      
-     <b>Supported On :</b> SVN, GIT, HG, BZR
+     **For:** SVN, GIT, HG, BZR
 
-* <b>VCFetch</b>
+* **VCFetch**
      Fetch from repo (applicable for git only), auto completes available branches and options
      
-     <b>Supported On :</b> GIT, HG, BZR
+     **For:** GIT, HG, BZR
 
-* <b>VCPull</b>
+* **VCPull**
      Pull from repo (applicabe for git, hg, bzr), auto completes available branches and options
      
-     <b>Supported On :</b> GIT, HG, BZR
+     **For:** GIT, HG, BZR
       
-* <b>VCPush</b>
+* **VCPush**
      Push to repo (applicabe for git, hg, bzr), auto completes available branches and options
      
-     <b>Supported On :</b> GIT, HG, BZR
+     **For:** GIT, HG, BZR
      
-* <b>VCIncoming</b>
-     HG Incoming (applicable for hg only)
+* **VCIncoming**
+     HG Incoming
 
-* <b>VCOutgoing</b>
-     HG Outgoing (applicable for hg only)
+     **For:** applicable for HG only
 
-* <b>VCDefaultrepo</b>
+* **VCOutgoing**
+     HG Outgoing
+
+     **For:** applicable for HG only
+
+* **VCDefaultrepo**
     Set a default repo when a project belongs in more than one repository
 
-* <b>VCBrowse</b>
-   Browse the working copy files (files, buffers, favorites, bookmarks) and <b>repository(SVN only)</b>
+* **VCBrowse**
+   Browse the working copy files (files, buffers, favorites, bookmarks) and **repository(SVN only)**
 
      - VCBrowse
          This command brings up a menu of available options for browsing.
      - VCBrowseRepo [Arguments[
-         Only on <b>SVN repo</b>
+         Only on **SVN repo**
          This command lists files/directories from the repository. The current directory should be 
          a working copy for the plugin to pick up the SVN path or pass SVN url or autocomplete from
          the SVN urls from within the working dir
@@ -131,9 +135,9 @@ Autocompletes command options, file(s), dir(s), repo url(s)
            List the files from Buffer
 
      Cache for browsing:
-         The caching feature is <b>off by default</b>, On enabling the caching the listing of files for 
+         The caching feature is **off by default**, On enabling the caching the listing of files for 
      VCBrowseRepo and VCBrowseWorkingCopy will be faster. There are many levels at which the caching
-     can be enabled <b>see help:g:vc_cache_dir</b>
+     can be enabled **see help:g:vc_cache_dir**
 
     Some of the operations supported are
       - Recursive/Non-recursive listing of files from directory
@@ -142,33 +146,33 @@ Autocompletes command options, file(s), dir(s), repo url(s)
       - Copy/Move files/dirs , (Repo or Local)
       - View Info, Log
       - Add, Commit
-      - Checkout <b>(svn only)</b>
+      - Checkout **(svn only)**
     
       - Bookmark the dir/file. To persist the bookmarks across sessions see :help g:vc_browse_bookmarks_cache
 
-* <b>VCClearCache</b>
+* **VCClearCache**
      The cache/persistency is not enabled by default. please see :help VCClearCache for more info.
 
 ##Filter/PROMPT
 
 Has following modes, see help vc-filter for examples
 
-1. <b>FUZZY</b> : Performs fuzzy search by default.
+1. **FUZZY** : Performs fuzzy search by default.
            Toggle using global options or on the fly using & as suffix. See examples in help
 
-2. <b>ARGS</b>   : Accepts arguments to command executed from browse output, 
+2. **ARGS**   : Accepts arguments to command executed from browse output, 
             Toggle using key, use ? at filter to see the key
 
-3. <b>VER</b>    : When opening files for affected mode, when on, opens corresponding
+3. **VER**    : When opening files for affected mode, when on, opens corresponding
             versioned file, when off opens local file
             Toggle using key, use ? at filter to see the key
 
-4. <b>STICKY</b> : Have the filter/prompt as sticky when enabled
+4. **STICKY** : Have the filter/prompt as sticky when enabled
             Toggle using key, use ? at filter to see the key
 
 Operations:
 
-1. <b>Sort</b>  : Sort the ouput on key <F8>, If o/p has date will sort on date else the contents
+1. **Sort**  : Sort the ouput on key <F8>, If o/p has date will sort on date else the contents
 
 ##Global Options  :help vc-options and :help vc-customize
 
@@ -226,28 +230,28 @@ let g:vc_trunk_url = "svn://127.0.0.1/Path/until/trunk";
 
 Run from vim commandline
 
-`:VCBlame`
-`:VCDiff`
-`:VCLog`
-`:VCStatus`
-`:VCCopy`
-`:VCMove`
-`:VCRevert`
-`:VCCommit`
-`:VCCommits`
-`:VCAdd`
-`:VCIncoming`
-`:VCOutgoing`
-`:VCFetch`
-`:VCPull`
-`:VCPush`
-`:VCBrowse`
-`:VCBrowseWorkingCopy`
-`:VCBrowseRepo`
-`:VCBrowseBookMarks`
-`:VCBrowseMyList`
-`:VCBrowseBuffer`
-**`:help vc`**
+- `:VCBlame`
+- `:VCDiff`
+- `:VCLog`
+- `:VCStatus`
+- `:VCCopy`
+- `:VCMove`
+- `:VCRevert`
+- `:VCCommit`
+- `:VCCommits`
+- `:VCAdd`
+- `:VCIncoming`
+- `:VCOutgoing`
+- `:VCFetch`
+- `:VCPull`
+- `:VCPush`
+- `:VCBrowse`
+- `:VCBrowseWorkingCopy`
+- `:VCBrowseRepo`
+- `:VCBrowseBookMarks`
+- `:VCBrowseMyList`
+- `:VCBrowseBuffer`
+- **`:help vc`**
 
 
 
