@@ -1,6 +1,6 @@
 # vc.vim
 
-VIM (VIM 7 and up) plugin for subversion (svn), GIT, HG and BZR repositories.
+VIM/Neovim (VIM 7 and up) plugin for subversion (svn), GIT, HG and BZR repositories.
 Support for browsing the repository, working copy, bookmarks.
 Autocompletes command options, file(s), dir(s), repo url(s)
 
@@ -10,7 +10,7 @@ Autocompletes command options, file(s), dir(s), repo url(s)
    
 [1]: http://i.imgur.com/i5B696t.gif?1
 
-##Supported Operations
+## Supported Operations
 
 * **VCAdd[!] [Arguments]**
     Add and Commit File(s)/Directories to repository. VCAdd is supported as a command and also as an
@@ -153,7 +153,7 @@ Autocompletes command options, file(s), dir(s), repo url(s)
 * **VCClearCache**
      The cache/persistency is not enabled by default. please see :help VCClearCache for more info.
 
-##Filter/PROMPT
+## Filter/PROMPT
 
 Has following modes, see help vc-filter for examples
 
@@ -174,7 +174,7 @@ Operations:
 
 1. **Sort**  : Sort the ouput on key <F8>, If o/p has date will sort on date else the contents
 
-##Global Options  :help vc-options and :help vc-customize
+## Global Options  :help vc-options and :help vc-customize
 
  +  g:vc_max_logs, g:vc_max_open_files, g:vc_max_diff,
     g:vc_window_max_size, g:vc_warn_branch_log, g:vc_browse_max_files_cnt,
@@ -203,7 +203,7 @@ Operations:
    g:vc_custom_sticky_hl, g:vc_custom_commit_files_hl, g:vc_custom_commit_header_hl
 
 
-##Recomended settings at .vimrc
+## Recomended settings at .vimrc
 
 let g:vc_browse_cache_all = 1
     This enables caching, Listing of files will be faster, On MAC/Unix the default location is $HOME/.cache.
@@ -218,15 +218,19 @@ let g:vc_branch_url = ["svn://127.0.0.1/Path/until/branches/", "svn://127.0.0.1/
 let g:vc_trunk_url = "svn://127.0.0.1/Path/until/trunk";
     This settings when available will provide menu's to navigate trunk files for VCLog
 
-##Installation
+## Installation
 
-###Options 1:  (Pathogen Users)
+### Pathogen
 
 1. cd ~/.vim/bundle
-2. git clone https://github.com/juneedahamed/vc.vim
+2. git clone https://github.com/adelarsq/vc.vim
 
+### Plug
 
-##Basic Usage
+1. Use `Plug 'https://github.com/adelarsq/vc.vim'` on the vimrc.
+2. Execute `:PlugInstall`
+
+## Basic Usage
 
 Run from vim commandline
 
