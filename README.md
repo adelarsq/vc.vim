@@ -7,7 +7,7 @@ Autocompletes command options, file(s), dir(s), repo url(s)
 **NOTE**: svnj.vim users, replace all settings from svnj_ to vc_ 
 
 ![Animation][1]
-   
+
 [1]: http://i.imgur.com/i5B696t.gif?1
 
 ## Supported Operations
@@ -28,7 +28,7 @@ Autocompletes command options, file(s), dir(s), repo url(s)
 
 * **VCBlame [Arguments]**
     Vertically splits the blame info for the file in bufffer. Scrollbinds to the file.
-    
+
     **For:** SVN, GIT, HG, BZR
 
 * **VCStatus [Arguments]**
@@ -40,7 +40,7 @@ Autocompletes command options, file(s), dir(s), repo url(s)
       - Commit selected/marked files
       - Add selected/marked files 
       - Bookmark
-      
+
     **For:** SVN, GIT, HG, BZR
 
 * **VCLog [Arguments]**
@@ -54,7 +54,7 @@ Autocompletes command options, file(s), dir(s), repo url(s)
     - Diff :HEAD | :PREV  with selected revision (most useful with dirs only SVN)
     - Open marked revisons or revison under cursor as new file - newbuffer or vspilt
     - View Info and Log of revision
-    
+
     **For:** SVN, GIT, HG, BZR
 
 * **VCDiff [Arguments]**
@@ -80,24 +80,24 @@ Autocompletes command options, file(s), dir(s), repo url(s)
 
 * **VCRevert[!]**
      Revert to the latest revision, operates on the file in buffer. ! causes the buffer to auto reload
-     
+
      **For:** SVN, GIT, HG, BZR
 
 * **VCFetch**
      Fetch from repo (applicable for git only), auto completes available branches and options
-     
+
      **For:** GIT, HG, BZR
 
 * **VCPull**
      Pull from repo (applicabe for git, hg, bzr), auto completes available branches and options
-     
+
      **For:** GIT, HG, BZR
-      
+
 * **VCPush**
      Push to repo (applicabe for git, hg, bzr), auto completes available branches and options
-     
+
      **For:** GIT, HG, BZR
-     
+
 * **VCIncoming**
      HG Incoming
 
@@ -131,7 +131,7 @@ Autocompletes command options, file(s), dir(s), repo url(s)
            All of the book marked files will be listed as output. 
            These bookmarked files/dirs are available only for the current vim session unless caching 
            is enabled, Once vim is closed all bookmarks are lost if caching is not enabled.
-     -VCBrowseBuffer
+     - VCBrowseBuffer
            List the files from Buffer
 
      Cache for browsing:
@@ -139,7 +139,8 @@ Autocompletes command options, file(s), dir(s), repo url(s)
      VCBrowseRepo and VCBrowseWorkingCopy will be faster. There are many levels at which the caching
      can be enabled **see help:g:vc_cache_dir**
 
-    Some of the operations supported are
+    Some of the operations supported are:
+
       - Recursive/Non-recursive listing of files from directory
       - Navigate up/down the directory, Jump to Respository Root/Working Root/Home where applicable
       - Open file(s) in new buffer or vertical split
@@ -147,7 +148,6 @@ Autocompletes command options, file(s), dir(s), repo url(s)
       - View Info, Log
       - Add, Commit
       - Checkout **(svn only)**
-    
       - Bookmark the dir/file. To persist the bookmarks across sessions see :help g:vc_browse_bookmarks_cache
 
 * **VCClearCache**
