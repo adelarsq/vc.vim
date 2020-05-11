@@ -2,13 +2,8 @@
 
 VIM/Neovim (VIM 7 and up) plugin for subversion (svn), GIT, HG and BZR repositories.
 Support for browsing the repository, working copy, bookmarks.
-Autocompletes command options, file(s), dir(s), repo url(s)
 
-**NOTE**: svnj.vim users, replace all settings from svnj_ to vc_ 
-
-![Animation][1]
-
-[1]: http://i.imgur.com/i5B696t.gif?1
+Autocompletes command options, file(s), dir(s), repo url(s).
 
 ## Supported Operations
 
