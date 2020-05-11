@@ -1,4 +1,4 @@
-# vc.vim
+# vc.vim 🌱
 
 VIM/Neovim (VIM 7 and up) plugin for subversion (svn), GIT, HG and BZR repositories.
 Support for browsing the repository, working copy, bookmarks.
